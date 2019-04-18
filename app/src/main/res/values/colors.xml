@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008ABF</color>
+    <color name="colorPrimaryDark">#005F8C</color>
+    <color name="colorAccent">#B6BF00</color>
+    <color name="black">#071922</color>
+    <color name="darkGrey">#545454</color>
+    <color name="grey">#9D9D9D</color>
+    <color name="lightGrey">#D0D0D0</color>
+    <color name="white">#FFFFFF</color>
+    <color name="glass">#33000000</color>
+    <color name="glassdark">#66000000</color>
+
+    <color name="cartchecked">#79b779</color>
+    <color name="cartoverdue">#b5b579</color>
+    <color name="cartmaintenance">#b77979</color>
+</resources>

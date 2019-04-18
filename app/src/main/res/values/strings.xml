@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">Skyline Luge Carts</string>
+    <string name="cart">Cart: </string>
+    <string name="jumpto">Scan/Jump to Cart</string>
+    <string name="checked">Checked:</string>
+    <string name="remaining">Remaining:</string>
+    <string name="maintenance">Maintenance:</string>
+    <string name="print">Print</string>
+
+    <string name="create1">No checksheet in progress:</string>
+    <string name="create2">Start a checksheet</string>
+    <string name="locked">This checksheet has been locked.</string>
+
+    <string name="checker1">PM Checker</string>
+    <string name="checker2">AM Checker</string>
+    <string name="defaultnumcarts">69</string>
+    <string name="defaultzero">0</string>
+
+    <string name="cartnumtemp">Cart # Maintenance</string>
+    <string name="save">save</string>
+    <string name="ok">ok</string>
+    <string name="cancel">cancel</string>
+    <string name="maintenanceReason">Details:</string>
+    <string name="whatswrong">What\'s wrong with this cart?</string>
+    <string name="history">Maintenance History</string>
+    <string name="setoverdue">Mark cart as overdue</string>
+    <string name="unsetoverdue">Unmark cart as overdue</string>
+
+    <string-array name="maintenance_options">
+        <item name="repeat">Already In Maintenance</item>
+        <item name="overdue">Overdue</item>
+        <item name="pads">Pads</item>
+        <item name="wheels">Wheels</item>
+        <item name="brakes">Brakes</item>
+        <item name="steering">Steering</item>
+        <item name="wings">Wings</item>
+        <item name="body">Body</item>
+        <item name="other">Other</item>
+    </string-array>
+    <string name="repeat">Already In Maintenance</string>
+    <string name="overdue">Overdue</string>
+    <string name="pads">Pads</string>
+    <string name="wheels">Wheels</string>
+    <string name="brakes">Brakes</string>
+    <string name="steering">Steering</string>
+    <string name="wings">Wings</string>
+    <string name="body">Body</string>
+    <string name="other">Other</string>
+
+
+    <string name="eveningcount">Evening Cart Count</string>
+    <string name="setrotationcarts">Manage Carts In Rotation</string>
+    <string name="selectcartsinrotation">Select/deselect carts that are in rotation</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!--Nav and Settings-->
+
+</resources>
