@@ -25,7 +25,8 @@
             android:layout_gravity="center"
             android:paddingLeft="8dp"
             android:paddingStart="8dp"
-            android:onClick="cartDialog"/>
+            android:onClick="cartDialog"
+            android:id="@+id/cartinfobutton"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -38,16 +39,16 @@
                     android:layout_width="45dp"
                     android:layout_height="match_parent"
                     android:gravity="right"
-                    android:backgroundTint="@color/glassdark"
+                    android:background="@color/glassdark"
                     android:onClick="cartMaintenance"
-                    android:id="@+id/maintenance"
+                    android:id="@+id/maintenancebutton"
                     android:src="@drawable/wrench_button"
                     style="?android:buttonBarButtonStyle"/>
                 <ImageButton
                     android:layout_width="45dp"
                     android:layout_height="match_parent"
                     android:gravity="right"
-                    android:backgroundTint="@color/glassdark"
+                    android:background="@color/glassdark"
                     android:id="@+id/indicator"
                     android:onClick="cartPassed"
                     android:src="@drawable/check_button"

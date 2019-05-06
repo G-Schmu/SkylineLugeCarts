@@ -3,12 +3,204 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CartList">
+    tools:context=".CartListFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:orientation="vertical">
+
+        <!--Date Picker Button Bar-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/darkGrey"
+            style="?android:buttonBarStyle"
+            android:elevation="6dp">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="15"
+                android:id="@+id/yesterdaybutton"
+                android:drawableLeft="@drawable/ic_keyboard_arrow_left_black_24dp"
+                style="?android:buttonBarButtonStyle"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="70"
+                android:id="@+id/dateview"
+                android:text=""
+                style="?android:buttonBarButtonStyle">
+
+            </Button>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="15"
+                android:id="@+id/tomorrowbutton"
+                android:drawableRight="@drawable/ic_keyboard_arrow_right_black_24dp"
+                style="?android:buttonBarButtonStyle"/>
+        </LinearLayout>
+
+        <!--Search Bar-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/lightGrey"
+            android:elevation="5dp">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="number"
+                android:hint="@string/jumpto"
+                android:id="@+id/jumptotext"/>
+        </LinearLayout>
+
+        <!--Checksheet area-->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/checksheetcontainer">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/cartlistcontainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+            </android.support.v7.widget.RecyclerView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:background="@color/glass"
+                android:clickable="true"
+                android:id="@+id/createchecksheet"
+                android:visibility="gone">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/create1"
+                    android:textSize="18sp"/>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/create2"
+                    android:id="@+id/startCheckSheet"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:background="@color/glassdark"
+                android:id="@+id/locked"
+                android:visibility="gone">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="22sp"
+                    android:textColor="@color/white"
+                    android:text="@string/locked"/>
+                <LinearLayout
+                    android:layout_width="83dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/glass"
+                    android:clickable="true"
+                    android:gravity="center">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp"
+                        android:src="@drawable/baseline_lock_white_18dp"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+        </FrameLayout>
+
+        <!--Bottom Information Bar-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:elevation="6dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <EditText
+                    android:id="@+id/pmchecker"
+                    android:layout_width="0dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    android:hint="@string/checker1"/>
+                <EditText
+                    android:id="@+id/amchecker"
+                    android:layout_width="0dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    android:hint="@string/checker2"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:orientation="horizontal"
+                android:baselineAligned="false">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical"
+                    android:background="@color/cartchecked"
+                    android:id="@+id/filterChecked">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkedcarts"
+                        android:textAlignment="textEnd"
+                        android:text="@string/defaultzero"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical"
+                    android:background="@color/cartmaintenance"
+                    android:id="@+id/filterMaint">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/maintenancecarts"
+                        android:textAlignment="textEnd"
+                        android:text="@string/defaultzero"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="69"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical"
+                    android:background="@color/lightGrey"
+                    android:id="@+id/filterRemain">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/remainingcarts"
+                        android:textAlignment="textEnd"
+                        android:text="@string/defaultnumcarts"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
 
 </FrameLayout>

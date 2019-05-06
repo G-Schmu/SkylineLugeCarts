@@ -1,8 +1,16 @@
 package com.previntagestudios.skylinelugecarts;
 
+import android.arch.persistence.room.ColumnInfo;
+import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.PrimaryKey;
+
+@Entity(tableName = "maintenance")
 public class MaintenanceForm {
-    private int cartnum;
+    @PrimaryKey
+    @ColumnInfo(name = "formID")
     private String date;
+    @ColumnInfo(name = "cartID")
+    private int cartnum;
     private String reason;
     private String comment;
     //used to determine if the form is a new submission and needs to be saved, or loaded from before

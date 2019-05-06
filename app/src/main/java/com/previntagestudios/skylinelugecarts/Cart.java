@@ -1,14 +1,28 @@
 package com.previntagestudios.skylinelugecarts;
 
+import android.arch.persistence.room.ColumnInfo;
+import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.Ignore;
+import android.arch.persistence.room.PrimaryKey;
+
 import java.util.ArrayList;
 
+@Entity(tableName = "cartlist")
 public class Cart {
+    @PrimaryKey
+    @ColumnInfo
     private int cartnum;
+
+    @ColumnInfo
     private int in_rotation;
+    @ColumnInfo
     private boolean checked;
-    private ArrayList<MaintenanceForm> history;
+    @ColumnInfo
     private boolean maintenance;
+    @ColumnInfo
     private boolean overdue;
+    @Ignore
+    private ArrayList<MaintenanceForm> history;
 
     public Cart (int cartnum, int in_rotation) {
         this.cartnum = cartnum;
